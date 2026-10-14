@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview · Bhopal Smart City</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="content.css" />
+</head>
+<body data-page="overview">
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <main>
+    <section class="section hero">
+      <p class="eyebrow">City Operations Center · Madhya Pradesh</p>
+      <h1>Bhopal <span class="accent">Smart City</span> Dashboard</h1>
+      <p class="lead">
+        A live view of the City of Lakes: air, weather, traffic, water, power,
+        mobility, waste and public services in one place.
+      </p>
+      <div class="status-row">
+        <span class="pill"><i class="dot"></i> <span id="liveStatus">Sample data</span></span>
+        <span class="pill">Updated <span id="lastUpdated">—</span></span>
+      </div>
+      <div class="hero-kpis" id="heroKpis"></div>
+    </section>
+
+    <section class="section">
+      <header class="section-head">
+        <h2>Today at a glance</h2>
+        <p>Alerts and announcements for the city.</p>
+      </header>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Alerts</h3>
+          <div data-list="alerts"></div>
+        </article>
+        <article class="card">
+          <h3>Announcements</h3>
+          <div data-list="announcements"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <header class="section-head">
+        <h2>Trends this week</h2>
+        <p>How the main numbers have moved over the last seven days.</p>
+      </header>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Air quality (AQI) <small>last 7 days</small></h3>
+          <div data-chart="aqi7d"></div>
+        </article>
+        <article class="card">
+          <h3>Solid waste collected <small>tonnes per day</small></h3>
+          <div data-chart="waste7d"></div>
+        </article>
+        <article class="card span-2">
+          <h3>Citizen complaints by type <small>open and recent</small></h3>
+          <div data-chart="complaintsByType"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <header class="section-head">
+        <h2>Explore</h2>
+        <p>Each section has live cards, detailed tables and trends.</p>
+      </header>
+      <div class="grid grid-3">
+        <a class="card tilt-card nav-card" href="environment.html">
+          <h3>Environment</h3>
+          <p class="note">Air quality by station, rainfall, lake levels and health advice.</p>
+          <span class="go">Open →</span>
+        </a>
+        <a class="card tilt-card nav-card" href="mobility.html">
+          <h3>Mobility</h3>
+          <p class="note">Traffic signals, congestion by hour, bus routes and parking.</p>
+          <span class="go">Open →</span>
+        </a>
+        <a class="card tilt-card nav-card" href="utilities.html">
+          <h3>Utilities</h3>
+          <p class="note">Water zones, power feeders, load trends and ward-level waste.</p>
+          <span class="go">Open →</span>
+        </a>
+        <a class="card tilt-card nav-card" href="services.html">
+          <h3>Public Services</h3>
+          <p class="note">Emergency response by zone, complaints and helplines.</p>
+          <span class="go">Open →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <header class="section-head">
+        <h2>About Bhopal</h2>
+        <p>General background. Check official sources for current figures.</p>
+      </header>
+      <div class="facts">
+        <div class="fact"><b>City of Lakes</b><span>Bhopal's well-known nickname</span></div>
+        <div class="fact"><b>Capital</b><span>Capital of Madhya Pradesh</span></div>
+        <div class="fact"><b>Two main lakes</b><span>Upper Lake and Lower Lake</span></div>
+        <div class="fact"><b>Central India</b><span>Located in the Malwa region</span></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Sample data shown for layout. Connect live sources as described in README.md.</p>
+    </footer>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="background.js"></script>
+  <script src="nav.js"></script>
+  <script src="app.js"></script>
+  <script src="content.js"></script>
+</body>
+</html>
